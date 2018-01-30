@@ -27,7 +27,8 @@ def create_app(config_name):
     login_manager.init_app(app)
 
     #Blueprints
-
+    from blueprints.auth import auth as auth_blueprint
+    app.register_blueprint(auth_blueprint)
 
 
 
