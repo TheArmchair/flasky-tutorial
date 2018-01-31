@@ -18,6 +18,8 @@ class RegistrationForm(Form):
     username = StringField('Username', validators=[
         Required(),Length(1,64), Regexp('^[A-Za-z][A-Za-z0-9_.]*$',0,
         'Usernames must have only letters, numbers, dots or underscores')])
+    firstname = StringField('First Name', validators=[Required(),Length(1,64)])
+    lastname = StringField('Last Name', validators=[Required(),Length(1,100)])
     password = PasswordField('Password', validators=[
         Required(), EqualTo('password2', message='Passwords must match.')
     ])

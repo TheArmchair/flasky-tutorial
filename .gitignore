@@ -2,3 +2,4 @@
 tests
 migrations
 .sqlite
+config.py
