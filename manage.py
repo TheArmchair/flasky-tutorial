@@ -6,7 +6,7 @@ from flask_migrate import Migrate, MigrateCommand
 from app.models.roles import Role 
 from app.models.user import User
 
-app = create_app(os.getenv('FLASK_ENVIRONMENT') or 'default')
+app = create_app(os.environ.get('FLASK_ENVIRONMENT') or 'default')
 manager = Manager(app)
 migrate = Migrate(app,db)
 

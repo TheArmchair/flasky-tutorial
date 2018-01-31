@@ -18,7 +18,7 @@
                 <li><a href='/'>Home</a></li>
             </ul>
             <ul class='nav navbar-nav navbar-right'>
-                {% if session['logged_in'] == True %}
+                {% if current_user.is_authenticated %}
                 <li><a style="pointer-events: none; cursor: default" href="#">Hello {{ current_user.username }}</a></li>
                 <li><a href="{{ url_for('auth.logout') }}">Sign Out</a></li>
                 {% else %}
