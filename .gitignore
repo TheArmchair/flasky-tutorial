@@ -3,3 +3,4 @@ tests
 migrations
 .sqlite
 config.py
+__pycache__
